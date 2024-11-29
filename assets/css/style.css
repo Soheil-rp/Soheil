@@ -1,6 +1,33 @@
 .pic{
     background-size: cover;
 }
-.icon{
-    position: relative;
+.fleximage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 100px;
 }
+.p-w-h{
+    padding-left: 20px;
+    padding-left: 20px;
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+}
+.w{
+    width: 100%;
+    max-width: 250px;
+    filter: drop-shadow(2px 4px 2px black);
+    
+}
+.w-1{
+    width: 100%;
+    max-width: 250px;
+    margin-top: 10px;
+    border-radius: 5px;
+}   
