@@ -6,12 +6,3 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
- console.log(1);
- new Promise((resolve , reject) => {
-  console.log(2)
-  resolve("ok")
- },1000)
-  then(function(response){
-    console.log(response)
-    console.log(3)
-  });

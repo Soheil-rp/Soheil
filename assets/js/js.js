@@ -28,3 +28,34 @@ document.querySelector('.auto-modal-user-back').classList.add('dis-none')
 //   console.log("autoicon2")
 //   document.querySelector('.collapsible-header').classList.add('collapsible-body')
 // }
+
+setTimeout(function(){
+  console.log("start");
+  fetch('https://jsonplaceholder.typicode.com/users')
+  .then((Response) => Response.json())
+  .then((json) => {
+    console.log("end");
+    console.log(json)
+  
+  let html = ""
+  for( const user of json){
+
+    html = html+`<tr>
+                <td class="td-tr-2">${user.id}</td>
+                <td class="td-tr-2">${user.name}</td>
+                <td class="td-tr-2">${user.username}</td>
+                <td class="td-tr-2">${user.email}</td>
+                <td class="td-tr-2">${user.address.city}</td>
+                  <a href="#"><i class="material-icons" style="color: green;">create</i></a>
+                  <a href="#"><i class="material-icons" style="color: red;">close</i></a>
+                </td>
+              </tr>`
+  }
+
+  document.querySelector('.s').innerHTML=html
+
+
+  })
+
+
+},5000)
