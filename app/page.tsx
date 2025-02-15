@@ -4,14 +4,14 @@ import {
   Button,
   Input,
   Stack,
-  Box,
+  // Box,
   DrawerBackdrop,
   HStack,
   VStack,
 } from "@chakra-ui/react";
 import { Field } from "../components/ui/field";
 import { Flex } from "@chakra-ui/react";
-import { Heading } from "@chakra-ui/react";
+// import { Heading } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import {
@@ -25,7 +25,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "../components/ui/drawer";
-import { List } from "@chakra-ui/react";
+// import { List } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/react";
 import {
   AccordionItem,
@@ -36,14 +36,14 @@ import {
 import {
   PaginationItems,
   PaginationNextTrigger,
-  PaginationPageText,
+  // PaginationPageText,
   PaginationPrevTrigger,
   PaginationRoot,
 } from "../components/ui/pagination";
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import { useState } from "react";
-import { title } from "node:process";
+// import { title } from "node:process";
 import { Film } from "./dto/film";
 
 const items = [
@@ -52,15 +52,15 @@ const items = [
   { value: "c", title: "number", text: "09305205723" },
 ];
 
-const getlimititem = (
-  input: { family: string; age: string }[],
-  page: number,
-  limit: number
-): { family: string; age: number }[] => {
-  const output = input.slice(5, 5);
-  console.log(output);
-  return [];
-};
+// const getlimititem = (
+//   input: { family: string; age: string }[],
+//   page: number,
+//   limit: number
+// ): { family: string; age: number }[] => {
+//   const output = input.slice(5, 5);
+//   console.log(output);
+//   return [];
+// };
 
 
 const film : Film[]= [
@@ -87,13 +87,13 @@ const Demo = () => {
    
   const page = movie;
   const pagesize = 5;
-  const count = 15;
+  // const count = 15;
   const startmovie = (movie - 1) * pagesize
   const endmovie = startmovie + pagesize
   const visibleItems = film.slice(startmovie, endmovie)
-  const handlemade = (id: any) => {
-  console.log(id)
-  }
+  // const handlemade = (id: any) => {
+  // console.log(id)
+  // }
   
 
   
@@ -123,6 +123,7 @@ const Demo = () => {
                   src="https://imgs.search.brave.com/MdMUoI-o_Odq4-zJ1yHBJYVOBvJWhrpNMdGq-ebQa_A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzEwLzQwLzA3LzAx/LzM2MF9GXzEwNDAw/NzAxNDRfaWRhTkdE/ZzVRUmtPaEhxTmRq/M1ZzN1BkTGROajdC/eTIuanBn"
                   width="full"
                   height="250px"
+                  alt=""
                 />
               </DrawerHeader>
             </Stack>
@@ -161,6 +162,7 @@ const Demo = () => {
             src="https://imgs.search.brave.com/JvbkgeMbkPtYiY1fHHYZ-uxPQ7TUnPa86X_jWz8Be1s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vYi9iNC9E/b3JuYV9sb2dvLnBu/Zw"
             margin="0 auto"
             width="200px"
+            alt=""
           />
 
           <Flex
@@ -220,8 +222,8 @@ const Demo = () => {
       <HStack css={{
         justifyContent:"space-around"
       }}>
-         {visibleItems.map((index) => (
-          <Text> {index.id} * {index.title} </Text>
+         {visibleItems.map((value,index) => (
+          <Text key={index}> {value.id} * {value.title} </Text>
         ))} 
       </HStack>
       <PaginationRoot
