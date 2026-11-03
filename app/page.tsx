@@ -49,7 +49,7 @@ import { Film } from "./dto/film";
 const items = [
   { value: "a", title: "First name", text: "soheil" },
   { value: "b", title: "last name", text: "karami" },
-  { value: "c", title: "number", text: "09305205723" },
+  { value: "c", title: "number", text: "" },
 ];
 
 // const getlimititem = (
